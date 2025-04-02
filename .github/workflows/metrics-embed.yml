@@ -8,9 +8,10 @@ on:
     - cron: '0 0 */7 * *' # This will run the workflow daily at midnight
 
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
     - name: Run Metrics Embed
       uses: lowlighter/metrics@latest
